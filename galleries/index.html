@@ -8,7 +8,7 @@
 	</script>
 	<head>
 		
-<title>归档 | TheWanderingPixel's blog</title>
+<title>相册 | TheWanderingPixel's blog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -52,8 +52,7 @@
 	<meta name="generator" content="Hexo 7.3.0"></head>
 
 	<body>
-		
-    <header class="sticky-header">
+		<header class="sticky-header">
 	<nav>
 		<div class="nav-left">
 			<a href="/" class="logo">
@@ -223,7 +222,7 @@
 	
 
 	<script>
-		const name = 'archives';
+		const name = 'galleries';
 		const ul = document.querySelectorAll('.nav-right ul')[0];
 		const lis = ul.querySelectorAll('li');
 
@@ -285,14 +284,12 @@
 
 
 <div class="main-wrapper">
-    <main class="archive">
-        
-            
-            
-            
-                <header class="main-header">
+    <main class="galleries">
+        <header class="main-header">
 	
 		
+			
+				
 			
 				
 			
@@ -303,12 +300,10 @@
 				
 					<div class="header-background-content">
 						<span>
-							<img no-lazy src="/images/headers_icon/archives.svg" alt="Quieter">
+							<img no-lazy src="/images/headers_icon/galleries.svg" alt="Quieter">
 						</span>
-						<h1>居然一共才写了 1 篇文章！</h1>
+						<h1>有趣的相册~（施工中）</h1>
 					</div>
-				
-			
 				
 			
 				
@@ -318,65 +313,33 @@
 		
 	
 </header>
-            
-        
-        <div class="article-container archive-content">
-            <article class="archive-content-info">
+        <div class="galleries-container">
+            <div class="galleries-block">
                 
-                    <div class="local-search">
-                        <h1 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h1>
-                        <div class="input-container">
-                            <img no-lazy class="search-icon" src="/images/icon/search.png" alt="search-icon" />
-                            <input type="search" placeholder="输入关键字以搜索……" id="local-search-input" class="input" />
-                        </div>
-                        <p id="local-search-result" class="result"></p>
-                        <div id="local-search-content" class="content"></div>
+                    <div class="galleries-block-content">
+                        <a class="img-container" href="2024年夏日游记">
+                            <div class="photo-frames">
+                                <img style="" src="/images/gallery/cover1.png" alt="Cover">
+                            </div>
+                            <h1 class="title">2024年夏日游记</h1>
+                        </a>
+                        <p class="description">记录2024年夏天的美好时光。湖边日落、森林小径、城市夜景，每一刻都值得珍藏。</p>
                     </div>
-                    <script>
-                        $.getScript('/js/plugins/search.js', function () {
-                            searchFunc('/search.xml', 'local-search-input', 'local-search-content', 'local-search-result')
-                        })
-                    </script>                
                 
-                <div class="grouping">
-    
-    
-    
+                    <div class="galleries-block-content">
+                        <a class="img-container" href="家庭温馨瞬间">
+                            <div class="photo-frames">
+                                <img style="" src="/images/gallery/cover2.png" alt="Cover">
+                            </div>
+                            <h1 class="title">家庭温馨瞬间</h1>
+                        </a>
+                        <p class="description">家人团聚的温馨回忆。珍惜与家人在一起的每一天，把温馨的瞬间留在心底。</p>
+                    </div>
+                
+            </div>
+        </div>
         
-        
-            
-            
-                <h1 id="_2024-年"><a href="#2024-年" class="headerlink" title="2024 年"></a><a href="/archives/2024">2024 年</a></h1>
-            
-        
-        
-            
-            
-                <h2 id="_2024-7-月"><a href="#2024-7 月" class="headerlink" title="7 月"></a><a href="/archives/2024/07">7 月</a></h2>
-            
-        
-        
-        <a class="grouping-item" href="/2024/07/02/运维面试技巧/">
-            <span>运维面试技巧</span>
-            <time>07/02</time>
-        </a>
-        
-    
-</div>
-            </article>
-            
 	<aside class="rightside">
-	
-		<div class="rightside-button not-toc-button" id="js-aside">
-			<span>
-				<img no-lazy src="/images/icon/aside.png" class="rightside-button-icon" alt="Icon">
-			</span>
-		</div>
-		<script>
-			$("#js-aside").click(function () {
-				onShowAsideButton();
-			});
-		</script>
 	
 	<div class="rightside-button" id="js-toggle_theme">
 		<span>
@@ -421,120 +384,9 @@
     
     
     
-        
-            
-<script src="/js/plugins/gitalk.min.js"></script>
-
-            
-<link rel="stylesheet" href="/css/plugins/gitalk.css">
-
-            <div id="gitalk" class="comments"></div>
-            <!-- Gitalk -->
-            <script src="/js/plugins/md5.min.js"></script>
-            <script>
-                const data = '{"clientID":"Ov23ctibQW2NWUhVYeyt","clientSecret":"654cab25c8f853e469aa6fe81a24ba9d4d1d40c2","repo":"TheWanderingPixel.github.io","owner":"TheWanderingPixel","admin":"TheWanderingPixel"}'
-                const gitalk = new Gitalk({
-                    ...JSON.parse( data),
-                    id:md5(location.pathname), //  location.pathname,
-                    distractionFreeMode:false
-                })
-                gitalk.render('gitalk');
-            </script>
-        
-    
 </div>
-        </div>
     </main>
-    
-        <aside class="main-aside">
-    
-<script src="/js/widgets/aside.js"></script>
-
-    <script>
-        showAside();
-    </script>
-
-    <div class="aside-top">
-        <div class="aside-top-about aside-card">
-            <a href="/about" class="aside-top-about-portrait">
-                <img no-lazy src="https://avatars.githubusercontent.com/u/71678295?v=4&amp;size=64" alt="Q">
-            </a>
-            <div class="aside-top-about-info">
-                <span class="author"> TheWanderingPixel</span>
-                <span class="description">路漫漫其修远兮，吾将上下而求索。</span>
-            </div>              
-            <div class="aside-top-about-site">
-                <a href="/categories" class="aside-top-about-site-item">
-                    <span class="title">类别</span>
-                    <span class="count">1</span>
-                </a>
-                <a href="/tags" class="aside-top-about-site-item">
-                    <span class="title">标签</span>
-                    <span class="count">2</span>
-                </a>
-                <a href="/archives" class="aside-top-about-site-item">
-                    <span class="title">归档</span>
-                    <span class="count">1</span>
-                </a>
-            </div>
-            <div class="aside-top-about-contact">
-                
-                    
-                        <a target="_blank" rel="noopener" href="https://weibo.com/">
-                            <img no-lazy src="/images/bottom_icon/Weibo.webp" alt="Quieter">
-                        </a>
-                    
-                        <a target="_blank" rel="noopener" href="https://tieba.baidu.com/home/main?id=tb.1.986573e.ZD5cmMzYz8oZ8xL-WmikbQ?t=1694829517&amp;fr=index">
-                            <img no-lazy src="/images/bottom_icon/Tieba.webp" alt="Quieter">
-                        </a>
-                    
-                        <a target="_blank" rel="noopener" href="https://space.bilibili.com/480899917">
-                            <img no-lazy src="/images/bottom_icon/Bilibili.webp" alt="Quieter">
-                        </a>
-                    
-                        <a target="_blank" rel="noopener" href="https://github.com/TheWanderingPixel">
-                            <img no-lazy src="/images/bottom_icon/github.webp" alt="Quieter">
-                        </a>
-                    
-                
-            </div>
-        </div> 
-
-        
-    </div>
-
-    <div class="aside-bottom">
-        
-            <script>
-                
-                    const tocCollapsed = true;
-                
-                
-                    const tocDepth = 6;
-                
-                var headerString = '';
-                for (let i = 1; i <= tocDepth; i++) {
-                    if (i === 1) {
-                        headerString += 'h1';
-                    } else {
-                        headerString += ', h' + i;
-                    }
-                }
-                hbeToc();
-            </script>
-            <div class="aside-bottom-toc aside-card">
-                <div class="aside-bottom-toc-title">
-                    <h1>目录</h1>
-                    <span class="toc-percentage"></span>
-                </div>
-                <ol class="aside-bottom-toc-content"></ol>
-            </div>
-        
-    </div>
-</aside>
-    
 </div>
-
 		<footer>
 	<div class="content">
 		
