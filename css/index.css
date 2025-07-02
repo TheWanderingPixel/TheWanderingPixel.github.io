@@ -203,11 +203,11 @@ html[data-theme="dark"] .comment-input:hover {
   color: #fff !important;
   border-color: #444 !important;
 }
-html[data-theme="dark"] .gitalk-empty,
-html[data-theme="dark"] .waline-empty,
-html[data-theme="dark"] .comment-empty,
-html[data-theme="dark"] .v[data-class="empty"] {
+html[data-theme="dark"] .gt-comments-null {
   color: #fff !important;
+}
+html[data-theme="light"] .gt-comments-null {
+  color: #222 !important;
 }
 .local-search {
   display: grid;
