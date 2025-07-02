@@ -105,3 +105,73 @@ pre .closed {
   margin: 0;
   padding: 0;
 }
+.mac-code-container,
+.mac-code-container .mac-code-content,
+.mac-code-container pre,
+.mac-code-container code,
+.mac-code-container .line {
+  color: #fff !important;
+  background: none !important;
+}
+.mac-code-container .line {
+  color: #020202 !important;
+}
+.mac-code-container .string {
+  color: #b5f776 !important;
+}
+.mac-code-container .keyword {
+  color: #ff79c6 !important;
+}
+.mac-code-container .comment {
+  color: #6a9955 !important;
+}
+.mac-code-container .number {
+  color: #f1fa8c !important;
+}
+.mac-code-container .function {
+  color: #61afef !important;
+}
+.mac-code-container .variable {
+  color: #e5c07b !important;
+}
+.mac-code-container .bash {
+  color: #fff !important;
+}
+.mac-code-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  opacity: 0.7;
+  z-index: 2;
+  transition: opacity 0.2s;
+}
+.mac-code-copy-btn:hover {
+  opacity: 1;
+}
+html[data-theme="dark"] .mac-code-container,
+html[data-theme="dark"] .mac-code-container .mac-code-content,
+html[data-theme="dark"] .mac-code-container pre,
+html[data-theme="dark"] .mac-code-container code,
+html[data-theme="dark"] .mac-code-container .line {
+  color: #fff !important;
+}
+html[data-theme="dark"] .mac-code-container .line {
+  color: #fff !important;
+}
+html[data-theme="light"] .mac-code-container,
+html[data-theme="light"] .mac-code-container .mac-code-content,
+html[data-theme="light"] .mac-code-container pre,
+html[data-theme="light"] .mac-code-container code,
+html[data-theme="light"] .mac-code-container .line {
+  color: #222 !important;
+}
+html[data-theme="light"] .mac-code-container .line {
+  color: #222 !important;
+}

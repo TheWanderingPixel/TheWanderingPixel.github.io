@@ -62,6 +62,37 @@ function init() {
       $container.append($content);
       $content.append($figure);
     });
+
+    // 为每个 Mac 风格代码容器添加一键复制按钮
+    $('.mac-code-container').each(function () {
+      var $container = $(this);
+      // 避免重复添加
+      if ($container.find('.mac-code-copy-btn').length) return;
+      var $btn = $('<button class="mac-code-copy-btn">复制</button>');
+      $container.append($btn);
+
+      $btn.on('click', function () {
+        // 获取代码内容
+        var code = $container.find('pre').text();
+        // 复制到剪贴板
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(code).then(function () {
+            $btn.text('已复制!');
+            setTimeout(function () { $btn.text('复制'); }, 1200);
+          });
+        } else {
+          // 兼容旧浏览器
+          var textarea = document.createElement('textarea');
+          textarea.value = code;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          $btn.text('已复制!');
+          setTimeout(function () { $btn.text('复制'); }, 1200);
+        }
+      });
+    });
 }
 
 window.addEventListener('hexo-blog-decrypt', handleHexoBlogDecryptEvent);
