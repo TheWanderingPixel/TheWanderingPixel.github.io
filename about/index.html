@@ -386,27 +386,6 @@
     
     
     
-        
-            
-<script src="/js/plugins/gitalk.min.js"></script>
-
-            
-<link rel="stylesheet" href="/css/plugins/gitalk.css">
-
-            <div id="gitalk" class="comments"></div>
-            <!-- Gitalk -->
-            <script src="/js/plugins/md5.min.js"></script>
-            <script>
-                const data = '{"clientID":"Ov23ctibQW2NWUhVYeyt","clientSecret":"654cab25c8f853e469aa6fe81a24ba9d4d1d40c2","repo":"TheWanderingPixel.github.io","owner":"TheWanderingPixel","admin":"TheWanderingPixel"}'
-                const gitalk = new Gitalk({
-                    ...JSON.parse( data),
-                    id:md5(location.pathname), //  location.pathname,
-                    distractionFreeMode:false
-                })
-                gitalk.render('gitalk');
-            </script>
-        
-    
 </div>
         </div>
     </main>
