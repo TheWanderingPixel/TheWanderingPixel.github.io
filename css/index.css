@@ -80,6 +80,51 @@
 pre .closed {
   display: none;
 }
+.mac-code-container {
+  background: #2d2d2d;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  margin: 2em 0;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Fira Mono', 'Menlo', 'Consolas', 'Monaco', monospace;
+}
+.mac-code-header {
+  background: #232323;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+.mac-code-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+.mac-code-dot.red {
+  background: #ff5f56;
+}
+.mac-code-dot.yellow {
+  background: #ffbd2e;
+}
+.mac-code-dot.green {
+  background: #27c93f;
+}
+.mac-code-content {
+  padding: 18px 24px;
+  overflow-x: auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #f8f8f2;
+}
+.mac-code-content pre {
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
 .local-search {
   display: grid;
 }

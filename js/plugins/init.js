@@ -45,6 +45,23 @@ function init() {
     if (typeof initMermaid === 'function') {
         initMermaid();
     }
+
+    // 自动美化所有代码块为 Mac 风格容器（适配 highlight 结构）
+    $('figure.highlight').each(function () {
+      if ($(this).parent().hasClass('mac-code-content')) return;
+      var $figure = $(this);
+      var $container = $('<div class="mac-code-container"></div>');
+      var $header = $('<div class="mac-code-header">\
+        <span class="mac-code-dot red"></span>\
+        <span class="mac-code-dot yellow"></span>\
+        <span class="mac-code-dot green"></span>\
+      </div>');
+      var $content = $('<div class="mac-code-content"></div>');
+      $figure.before($container);
+      $container.append($header);
+      $container.append($content);
+      $content.append($figure);
+    });
 }
 
 window.addEventListener('hexo-blog-decrypt', handleHexoBlogDecryptEvent);
