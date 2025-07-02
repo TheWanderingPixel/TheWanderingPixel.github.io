@@ -175,3 +175,11 @@ html[data-theme="light"] .mac-code-container .line {
 html[data-theme="light"] .mac-code-container .line {
   color: #222 !important;
 }
+html[data-theme="dark"] textarea:focus,
+html[data-theme="dark"] textarea:hover,
+html[data-theme="dark"] .comment-input:focus,
+html[data-theme="dark"] .comment-input:hover {
+  background: #222 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
