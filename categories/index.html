@@ -8,7 +8,7 @@
 	</script>
 	<head>
 		
-<title>类别 | Hexo-Theme-Quieter</title>
+<title>分类 | Hexo-Theme-Quieter</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -282,7 +282,7 @@
 	</script>
 </header>
 
-<div class="main-wrapper">
+<div class="main-wrapper close-aside">
     <main class="categories">
         <header class="main-header">
 	
@@ -316,6 +316,15 @@
 			<article class="categories-content-info">
 				<div class="categories-class">
 					
+						<a class="categories-class-card" href="/categories/%E6%8A%80%E6%9C%AF/">
+							<span class="categories-class-card-title">技术</span>
+							<div class="categories-class-card-number">
+								<span>
+									<span class="categories-length">1</span> 篇
+								</span>
+							</div>
+						</a>
+					
 				</div>
 				<script>
 					var links = "/images/random_top_img/01.webp,/images/random_top_img/02.webp,/images/random_top_img/03.webp,/images/random_top_img/04.webp,/images/random_top_img/05.webp,/images/random_top_img/06.webp,/images/random_top_img/07.webp".split(',');
@@ -328,17 +337,6 @@
 			</article>
 			
 	<aside class="rightside">
-	
-		<div class="rightside-button not-toc-button" id="js-aside">
-			<span>
-				<img no-lazy src="/images/icon/aside.png" class="rightside-button-icon" alt="Icon">
-			</span>
-		</div>
-		<script>
-			$("#js-aside").click(function () {
-				onShowAsideButton();
-			});
-		</script>
 	
 	<div class="rightside-button" id="js-toggle_theme">
 		<span>
@@ -383,92 +381,9 @@
     
     
     
-        
-            
-<script src="/js/plugins/gitalk.min.js"></script>
-
-            
-<link rel="stylesheet" href="/css/plugins/gitalk.css">
-
-            <div id="gitalk" class="comments"></div>
-            <!-- Gitalk -->
-            <script src="/js/plugins/md5.min.js"></script>
-            <script>
-                const data = '{"clientID":"Ov23ctibQW2NWUhVYeyt","clientSecret":"654cab25c8f853e469aa6fe81a24ba9d4d1d40c2","repo":"TheWanderingPixel.github.io","owner":"TheWanderingPixel","admin":"TheWanderingPixel"}'
-                const gitalk = new Gitalk({
-                    ...JSON.parse( data),
-                    id:md5(location.pathname), //  location.pathname,
-                    distractionFreeMode:false
-                })
-                gitalk.render('gitalk');
-            </script>
-        
-    
 </div>
 		</div>
     </main>
-    
-        <aside class="main-aside">
-    
-<script src="/js/widgets/aside.js"></script>
-
-    <script>
-        showAside();
-    </script>
-
-    <div class="aside-top">
-        <div class="aside-top-about aside-card">
-            <a href="/about" class="aside-top-about-portrait">
-                <img no-lazy src="https://avatars.githubusercontent.com/u/71678295?v=4&amp;size=64" alt="Q">
-            </a>
-            <div class="aside-top-about-info">
-                <span class="author"> TheWanderingPixel</span>
-                <span class="description">不以物喜，不以己悲。</span>
-            </div>              
-            <div class="aside-top-about-site">
-                <a href="/categories" class="aside-top-about-site-item">
-                    <span class="title">类别</span>
-                    <span class="count">0</span>
-                </a>
-                <a href="/tags" class="aside-top-about-site-item">
-                    <span class="title">标签</span>
-                    <span class="count">0</span>
-                </a>
-                <a href="/archives" class="aside-top-about-site-item">
-                    <span class="title">归档</span>
-                    <span class="count">2</span>
-                </a>
-            </div>
-            <div class="aside-top-about-contact">
-                
-                    
-                        <a href="">
-                            <img no-lazy src="/images/bottom_icon/Weibo.webp" alt="Quieter">
-                        </a>
-                    
-                        <a href="">
-                            <img no-lazy src="/images/bottom_icon/Tieba.webp" alt="Quieter">
-                        </a>
-                    
-                        <a href="">
-                            <img no-lazy src="/images/bottom_icon/Bilibili.webp" alt="Quieter">
-                        </a>
-                    
-                        <a href="">
-                            <img no-lazy src="/images/bottom_icon/github.webp" alt="Quieter">
-                        </a>
-                    
-                
-            </div>
-        </div> 
-
-        
-    </div>
-
-    <div class="aside-bottom">
-        
-    </div>
-</aside>
     
 </div>
 		<footer>
