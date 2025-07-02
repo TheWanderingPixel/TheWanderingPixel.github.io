@@ -183,3 +183,6 @@ html[data-theme="dark"] .comment-input:hover {
   color: #fff !important;
   border-color: #444 !important;
 }
+html[data-theme="dark"] .gt-comments-null {
+  color: #fff !important;
+}
