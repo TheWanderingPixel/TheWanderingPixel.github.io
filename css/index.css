@@ -119,11 +119,61 @@ pre .closed {
   line-height: 1.7;
   color: #f8f8f2;
 }
-.mac-code-content pre {
+/* 让代码块内容和 md 源文件一致，支持缩进、换行、对齐 */
+.mac-code-content pre,
+.mac-code-content code {
+  font-family: 'Fira Mono', 'Menlo', 'Consolas', 'Monaco', monospace;
+  font-size: 15px;
+  line-height: 1.7;
   background: none;
-  box-shadow: none;
   margin: 0;
   padding: 0;
+  white-space: pre;
+  /* 保留所有缩进和换行 */
+  word-break: normal;
+  /* 不强制断词 */
+  overflow-x: auto;
+}
+/* 优化带行号表格结构 */
+.mac-code-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: none;
+}
+.mac-code-content td.gutter {
+  width: 2.5em;
+  text-align: right;
+  color: #888;
+  background: none;
+  user-select: none;
+  padding-right: 0.5em;
+  font-size: 14px;
+  vertical-align: top;
+}
+.mac-code-content td.code {
+  width: auto;
+  background: none;
+  font-size: 15px;
+  vertical-align: top;
+  padding-left: 0.5em;
+}
+/* 语言标签样式 */
+.mac-code-header {
+  position: relative;
+}
+.mac-code-lang {
+  position: absolute;
+  right: 70px;
+  top: 7px;
+  font-size: 13px;
+  color: #bbb;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 1px 8px;
+  text-transform: lowercase;
+  pointer-events: none;
+  z-index: 3;
 }
 .mac-code-container,
 .mac-code-container .mac-code-content,
@@ -208,6 +258,57 @@ html[data-theme="dark"] .gt-comments-null {
 }
 html[data-theme="light"] .gt-comments-null {
   color: #222 !important;
+}
+.mac-code-content .line {
+  display: block;
+  white-space: pre;
+  word-break: normal;
+  font-family: inherit;
+}
+.mac-code-content .code pre {
+  margin: 0;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  font-family: 'Fira Mono', 'Menlo', 'Consolas', 'Monaco', monospace;
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: pre;
+  word-break: normal;
+  overflow-x: auto;
+}
+.mac-code-content .code .line {
+  display: block;
+  white-space: pre;
+  word-break: normal;
+  font-family: inherit;
+}
+.mac-code-content .gutter pre {
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: #888;
+  font-size: 14px;
+  text-align: right;
+  user-select: none;
+  line-height: 1.7;
+}
+.mac-code-content .gutter .line {
+  display: block;
+}
+.mac-code-content .gutter pre,
+.mac-code-content .code pre,
+.gutter pre,
+.code pre {
+  display: block !important;
+  white-space: pre !important;
+}
+article pre,
+.mac-code-content pre,
+.gutter pre,
+.code pre {
+  display: block !important;
+  white-space: pre !important;
 }
 .local-search {
   display: grid;
