@@ -311,7 +311,6 @@ html[data-theme="light"] .mac-code-content .gutter .line {
   max-width: 90vw;
   max-height: 80vh;
   width: 80vw;
-  background: #232323;
   border-radius: 14px;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.55), 0 1.5px 6px rgba(0, 0, 0, 0.18);
   overflow: auto;
@@ -353,4 +352,10 @@ html[data-theme="light"] .mac-code-content .gutter .line {
   to {
     opacity: 1;
   }
+}
+html[data-theme="dark"] .mac-code-modal {
+  background: #232323 !important;
+}
+html[data-theme="light"] .mac-code-modal {
+  background: #f8f8f2 !important;
 }
