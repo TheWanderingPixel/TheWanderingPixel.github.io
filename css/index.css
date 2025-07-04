@@ -95,12 +95,13 @@ pre .closed {
   display: flex;
   align-items: center;
   padding-left: 16px;
+  position: relative;
 }
 .mac-code-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 6px;
   display: inline-block;
 }
 .mac-code-dot.red {
@@ -159,9 +160,6 @@ pre .closed {
   padding-left: 0.5em;
 }
 /* 语言标签样式 */
-.mac-code-header {
-  position: relative;
-}
 .mac-code-lang {
   position: absolute;
   right: 70px;
@@ -296,19 +294,85 @@ html[data-theme="light"] .gt-comments-null {
 .mac-code-content .gutter .line {
   display: block;
 }
-.mac-code-content .gutter pre,
-.mac-code-content .code pre,
-.gutter pre,
-.code pre {
-  display: block !important;
-  white-space: pre !important;
-}
 article pre,
 .mac-code-content pre,
 .gutter pre,
 .code pre {
   display: block !important;
   white-space: pre !important;
+  margin: 0;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+.mac-code-content .gutter .line,
+.mac-code-content .code .line,
+.gutter .line,
+.code .line {
+  display: block !important;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 1.7em;
+  line-height: 1.7;
+  color: #f8f8f2 !important;
+  background: none !important;
+  opacity: 1 !important;
+}
+html[data-theme="dark"] .mac-code-content .code .line,
+html[data-theme="dark"] .mac-code-content .gutter .line {
+  color: #fff !important;
+}
+html[data-theme="light"] .mac-code-content .code .line,
+html[data-theme="light"] .mac-code-content .gutter .line {
+  color: #222 !important;
+}
+.mac-code-modal {
+  z-index: 9999;
+  max-width: 90vw;
+  max-height: 80vh;
+  width: 80vw;
+  background: #232323;
+  border-radius: 14px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.55), 0 1.5px 6px rgba(0, 0, 0, 0.18);
+  overflow: auto;
+  border: 2px solid #444;
+  animation: scaleIn 0.25s cubic-bezier(0.4, 1.6, 0.6, 1);
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.mac-code-modal:hover {
+  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.22);
+  border-color: #888;
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.mac-code-modal-mask {
+  position: fixed;
+  z-index: 9998;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .local-search {
   display: grid;
