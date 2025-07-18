@@ -8,7 +8,7 @@
 	</script>
 	<head>
 		
-<title>进程和线程的区分 | TheWanderingPixel's blog</title>
+<title>flutter3.32.6 windows开发环境配置 | TheWanderingPixel's blog</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,7 +19,7 @@
 
 
 
-<meta name="keywords" content="进程,线程,">
+<meta name="keywords" content="flutter,">
 <meta name="description" content="">
 
 
@@ -283,8 +283,8 @@
 					document.getElementById('breadcrumb'),
 					"类别",
 					"/categories",
-					"计算机科学基础",
-					"/categories/计算机科学基础"
+					"环境配置",
+					"/categories/环境配置"
 				);
 			
 		
@@ -311,14 +311,12 @@
 				<ul class="post-header-tag">
 					
 						
-							<li><a href="/tags/进程"><span>进程</span></a></li>
-						
-							<li><a href="/tags/线程"><span>线程</span></a></li>
+							<li><a href="/tags/flutter"><span>flutter</span></a></li>
 						
 					
 				</ul>
 				
-				<h1>进程和线程的区分</h1>
+				<h1>flutter3.32.6 windows开发环境配置</h1>
 		
 				
 		
@@ -335,11 +333,11 @@
 					
 						<div class="post-header-info-categories">
 							
-								<a href="/categories/计算机科学基础">计算机科学基础</a>
+								<a href="/categories/环境配置">环境配置</a>
 							
 						</div>
 					
-					<time>2025/07/05 16:16:28</time>
+					<time>2025/07/13 18:28:12</time>
 				</div>
 		
 				
@@ -374,46 +372,34 @@
 </header>
         <div class="post-content article-container">
             <article class="post-content-info">
-                <h1 id="进程和线程的区分"><a href="#进程和线程的区分" class="headerlink" title="进程和线程的区分"></a>进程和线程的区分</h1><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><ul>
-<li>进程是操作系统资源分配和管理的基本单位，每个进程拥有独立的代码、数据和堆栈空间。</li>
-<li>进程之间相互独立，通常通过操作系统提供的进程间通信（IPC）机制（如管道、消息队列、共享内存、信号量等）进行数据交换。</li>
-<li>进程的创建和销毁开销较大，适合需要高度隔离和安全性的场景。</li>
-<li>进程崩溃不会直接影响其他进程，提高了系统的稳定性。</li>
-<li><p>Python代码示例（多进程）：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> multiprocessing</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">child_task</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;子进程 PID: <span class="subst">&#123;os.getpid()&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;子进程正在执行任务...&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">parent_task</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;父进程 PID: <span class="subst">&#123;os.getpid()&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;父进程正在执行任务...&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 创建子进程</span></span><br><span class="line">    process = multiprocessing.Process(target=child_task)</span><br><span class="line">    process.start()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 父进程执行</span></span><br><span class="line">    parent_task()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 等待子进程完成</span></span><br><span class="line">    process.join()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;所有进程执行完成&quot;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><ul>
-<li>线程是程序执行的最小单位，是进程内的一个执行流。</li>
-<li>同一进程内的线程共享代码段、数据段和打开的文件等资源，但每个线程有独立的栈空间和寄存器。</li>
-<li>线程之间的切换开销较小，适合需要大量并发操作的场景，如高并发服务器、实时计算等。</li>
-<li>线程之间通信简单，可以直接读写共享内存，但需要注意同步和互斥，防止数据竞争。</li>
-<li>线程崩溃可能影响同一进程内的其他线程，降低了隔离性。</li>
-<li><p>Python代码示例（多线程）：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">worker_task</span>(<span class="params">worker_id</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;线程 <span class="subst">&#123;worker_id&#125;</span> 开始执行&quot;</span>)</span><br><span class="line">    time.sleep(<span class="number">2</span>)  <span class="comment"># 模拟工作</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;线程 <span class="subst">&#123;worker_id&#125;</span> 执行完成&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    threads = []</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 创建多个线程</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        thread = threading.Thread(target=worker_task, args=(i,))</span><br><span class="line">        threads.append(thread)</span><br><span class="line">        thread.start()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 等待所有线程完成</span></span><br><span class="line">    <span class="keyword">for</span> thread <span class="keyword">in</span> threads:</span><br><span class="line">        thread.join()</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;所有线程执行完成&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="其他角度对比"><a href="#其他角度对比" class="headerlink" title="其他角度对比"></a>其他角度对比</h2><ul>
-<li><strong>调度</strong>：进程由操作系统内核调度，线程可以由内核或用户级线程库调度。</li>
-<li><strong>资源占用</strong>：进程资源占用较多，线程资源占用较少。</li>
-<li><strong>适用场景</strong>：进程适合需要隔离的任务（如不同应用），线程适合需要高并发的任务（如 Web 服务器）。</li>
-<li><strong>安全性</strong>：进程间更安全，线程间更高效但安全性较低。</li>
-<li><strong>示例应用</strong>：<ul>
-<li>进程：浏览器的不同标签页、操作系统的不同服务。</li>
-<li>线程：Web 服务器的并发请求处理、图像处理中的多线程计算。</li>
-</ul>
-</li>
-</ul>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ul>
-<li>进程是资源分配的基本单位，而线程是 CPU 调度的基本单位。</li>
-<li>进程之间相互独立，线程之间可以共享数据。</li>
-<li>创建和销毁进程的开销大于线程。</li>
-<li>进程切换的开销大于线程切换，因为进程切换需要保存和恢复更多的状态信息。</li>
-<li>进程间通信（IPC）通常比线程间通信更复杂和耗时</li>
-<li>线程可以更高效地利用多核处理器，因为它们可以在同一进程内并发执行。</li>
-<li>进程通常用于实现应用程序的隔离和安全性，而线程用于实现并发和并行处理。</li>
-<li>进程可以有多个线程，但线程不能独立于进程存在。</li>
-</ul>
+                <h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-下载需要的软件包"><a href="#1-下载需要的软件包" class="headerlink" title="1. 下载需要的软件包"></a>1. 下载需要的软件包</h3><p>下载flutter </p>
+<p><img src="/images/flutter环境配置/flutter下载包.png" alt="flutter下载包.png"></p>
+<p>下载jdk（最好下载独立程序包）</p>
+<p><img src="/images/flutter环境配置/jdk下载包.png" alt="jdk下载包.png"></p>
+<p>下载vscode  或  Android Studio （路径和用户名非中文）</p>
+<p><img src="/images/flutter环境配置/vscode.png" alt="vscode.png"></p>
+<p>下载插件</p>
+<p><img src="/images/flutter环境配置/flutter插件.png" alt="flutter插件.png"></p>
+<h3 id="2-环境变量配置"><a href="#2-环境变量配置" class="headerlink" title="2. 环境变量配置"></a>2. 环境变量配置</h3><p>flutter环境下载国内镜像配置</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setx PUB_HOSTED_URL <span class="string">&quot;https://pub.flutter-io.cn&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setx FLUTTER_STORAGE_BASE_URL <span class="string">&quot;https://storage.flutter-io.cn&quot;</span></span><br></pre></td></tr></table></figure>
+<p>jdk配置</p>
+<p>新建环境变量，变量名为JAVA_HOME，值为刚刚JDK的安装目录  ，再新建一个CLASSPATH，值为%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar<br><img src="/images/flutter环境配置/JAVA_HOME配置.png" alt="JAVA_HOME配置.png"><br><img src="/images/flutter环境配置/CLASSPATH配置.png" alt="CLASSPATH配置.png"><br>配置系统java环境，点击Path，分别新增加%JAVA_HOME%\bin 和 %JAVA_HOME%\jre\bin<br><img src="/images/flutter环境配置/java环境配置.png" alt="java环境配置.png"></p>
+<p>编程工具配置，以vscode为例</p>
+<p>按下 Ctrl + ALT + P 在框内输入 flutter new project  会提示导入flutter。导入之前下载的flutter即可。注意路径不要含中文。因为刚刚设置了PUB_HOSTED_URL和FLUTTER_STORAGE_BASE_URL国内镜像源。项目初始化速度会挺快的。<br><img src="/images/flutter环境配置/flutter初始化项目目录.png" alt="flutter初始化项目目录.png"></p>
+<h3 id="3-maven和gradle下载镜像配置"><a href="#3-maven和gradle下载镜像配置" class="headerlink" title="3. maven和gradle下载镜像配置"></a>3. maven和gradle下载镜像配置</h3><p><img src="/images/flutter环境配置/镜像路径配置目录.png" alt="镜像路径配置目录.png"><br>settings.gradle文件配置，也可能叫settings.gradle.kts</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">pluginManagement &#123;</span><br><span class="line">    val flutterSdkPath = run &#123;</span><br><span class="line">        val properties = java.util.Properties()</span><br><span class="line">        file(&quot;local.properties&quot;).inputStream().use &#123; properties.load(it) &#125;</span><br><span class="line">        val flutterSdkPath = properties.getProperty(&quot;flutter.sdk&quot;)</span><br><span class="line">        require(flutterSdkPath != null) &#123; &quot;flutter.sdk not set in local.properties&quot; &#125;</span><br><span class="line">        flutterSdkPath</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    includeBuild(&quot;$flutterSdkPath/packages/flutter_tools/gradle&quot;)</span><br><span class="line"></span><br><span class="line">    repositories &#123;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://jitpack.io&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/google&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/public&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/center&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/gradle-plugin&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/releases&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        google()</span><br><span class="line">        mavenCentral()</span><br><span class="line">        gradlePluginPortal()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">plugins &#123;</span><br><span class="line">    id(&quot;dev.flutter.flutter-plugin-loader&quot;) version &quot;1.0.0&quot;</span><br><span class="line">    id(&quot;com.android.application&quot;) version &quot;8.7.3&quot; apply false</span><br><span class="line">    id(&quot;org.jetbrains.kotlin.android&quot;) version &quot;2.1.0&quot; apply false</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">include(&quot;:app&quot;)</span><br></pre></td></tr></table></figure>
+<p>build.gradle文件配置，也可能叫build.gradle.kts</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://jitpack.io&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/google&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/public&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/center&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/gradle-plugin&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url = uri(&quot;https://maven.aliyun.com/repository/releases&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        google()</span><br><span class="line">        mavenCentral()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">val newBuildDir: Directory = rootProject.layout.buildDirectory.dir(&quot;../../build&quot;).get()</span><br><span class="line">rootProject.layout.buildDirectory.value(newBuildDir)</span><br><span class="line"></span><br><span class="line">subprojects &#123;</span><br><span class="line">    val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)</span><br><span class="line">    project.layout.buildDirectory.value(newSubprojectBuildDir)</span><br><span class="line">&#125;</span><br><span class="line">subprojects &#123;</span><br><span class="line">    project.evaluationDependsOn(&quot;:app&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tasks.register&lt;Delete&gt;(&quot;clean&quot;) &#123;</span><br><span class="line">    delete(rootProject.layout.buildDirectory)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>gradle-wrapper.properties文件配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">distributionBase=GRADLE_USER_HOME</span><br><span class="line">distributionPath=wrapper/dists</span><br><span class="line">zipStoreBase=GRADLE_USER_HOME</span><br><span class="line">zipStorePath=wrapper/dists</span><br><span class="line">distributionUrl=https\://mirrors.aliyun.com/gradle/distributions/v8.10.2/gradle-8.10.2-all.zip</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="4-后续出现的问题"><a href="#4-后续出现的问题" class="headerlink" title="4. 后续出现的问题"></a>4. 后续出现的问题</h3><p>还是出现一直卡在 </p>
+<blockquote>
+<p>Running Gradle task ‘assembleDebug’…</p>
+</blockquote>
+<p>需要在项目的android终端目录下执行</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./gradlew clean   //可能出现网络卡顿，多运行几次，没问题再运行下面的build</span><br><span class="line"></span><br><span class="line">./gradlew build</span><br></pre></td></tr></table></figure>
+<hr>
 
             </article>
             
@@ -474,12 +460,16 @@
         <div class="post-paging">     
             <div class="post-paging-last">
                 
-                    <a href="/2025/07/07/%E5%B7%A5%E5%85%B7%E7%AE%B1%E5%8A%9F%E8%83%BD%E4%B8%8E%E6%8A%80%E6%9C%AF%E8%A7%A3%E6%9E%90/">
-                        上一篇：Windows多功能工具箱——功能亮点与技术实现解析
+                    <a href="/2025/07/18/%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95SSO%E5%AE%9E%E7%8E%B0%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
+                        上一篇：Spring Boot项目单点登录（SSO）实现与最佳实践
                     </a>
                 
             </div>
             <div class="post-paging-next">
+                
+                    <a href="/2025/07/09/json%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86/">
+                        下一篇：JSON数据生成工具介绍与技术原理
+                    </a>
                 
             </div>
         </div>

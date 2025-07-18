@@ -741,7 +741,6 @@ html[data-theme="light"] .mac-code-modal {
 }
 .sidebar .topo:before {
   content: '';
-  background-image: url(/images/pattern.png);
   background-repeat: repeat;
   height: 100%;
   left: 0;
@@ -912,7 +911,6 @@ header .header-background:before {
   left: 0;
   width: 100%;
   height: 600px;
-  background-image: url(../images/pattern.png);
   background-repeat: repeat;
   content: "";
 }
@@ -2095,7 +2093,6 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-image: url(../images/pattern.png);
   background-repeat: repeat;
   content: "";
 }

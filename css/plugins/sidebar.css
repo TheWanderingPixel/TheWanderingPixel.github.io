@@ -86,7 +86,6 @@
 }
 .sidebar .topo:before {
   content: '';
-  background-image: url(/images/pattern.png);
   background-repeat: repeat;
   height: 100%;
   left: 0;
